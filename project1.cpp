@@ -13,33 +13,74 @@
 using namespace std;
 
 /**
+ * swap
+ * Input: vector<double> (reference), int index a and b
+ * Output: none
+ * Side effect: Two elements in the array with the given indices are swapped.
+ */
+void swap(vector<double> &arr, int a, int b) {
+    double temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp; 
+}
+
+/**
  * selectionSort
- * Input: 
- * Output: 
- * The input array...
+ * Input: vector<double> (reference)
+ * Output: none
+ * Side effect: The referenced array is sorted smallest to largest by
+ * separating the array into a sorted and unsorted
  */
 void selectionSort(vector<double> &arrayToSort) {
-    return;
+    // iterate through entire array
+    for (int i = 0; i < arrayToSort.size(); i++) {
+        int min_idx = i; 
+        // iterate through unsorted array and find minimum value to add to
+        // the end of the sorted part
+        for (int j = i + 1; j < arrayToSort.size(); j++) {
+            if (arrayToSort[j] < arrayToSort[min_idx]) {
+                min_idx = j;
+            }
+        } // inner for loop - find minimum
+        swap(arrayToSort, i, min_idx); // swap minimum to end of sorted part
+    } // outer loop
 }
 
 /** 
  * insertionSort
- * Input: 
- * Output: 
- * The input array...
+ * Input: vector<double> (reference)
+ * Output: none
+ * Side effect: The referenced array is sorted smallest to largest by
+ * inserting unsorted elements sequentially into a sorted part of the array.
  */
 void insertionSort(vector<double> &arrayToSort) {
-    return;
+    // Insert each element from start to finish into sorted part
+    for (int i = 0; i < arrayToSort.size(); i++) {
+        // Bubble one element into correct position in sorted part
+        for (int j = i; (j > 0) && (arrayToSort[j] < arrayToSort[j - 1]); j--) {
+            swap(arrayToSort, j - 1, j);
+        }
+    }
 }
 
 /** 
  * bubbleSort
- * Input: 
- * Output: 
- * The input array...
+ * Input: vector<double> (reference)
+ * Output: none
+ * Side effect: The referenced array is sorted smallest to largest by 
+ * sequentially comparing adjacent elements and swapping the largest element 
+ * to the end of the array.
  */
 void bubbleSort(vector<double> &arrayToSort) {
-    return;
+    // Move the larger elements to the end
+    for (int i = arrayToSort.size(); i > 0; i--) {
+        // Bubble larger elements to the end of unsorted (beginning of sorted)
+        for (int j = 0; j < i - 1; j++) {
+            if (arrayToSort[j] > arrayToSort[j+1]) {
+                swap(arrayToSort, j, j + 1);
+            }
+        } // inner loop
+    } // outer loop
 }
 
 /** 

@@ -14,6 +14,7 @@
 #include <iostream>
 #include <vector>
 
+void swap(std::vector<double> &arr, int a, int b);
 void selectionSort(std::vector<double> &arrayToSort);
 void insertionSort(std::vector<double> &arrayToSort);
 void bubbleSort(std::vector<double> &arrayToSort);
