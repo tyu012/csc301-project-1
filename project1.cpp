@@ -3,9 +3,9 @@
  * project1.cpp
  * Fall 2025
  *
- * Partner 1:
- * Partner 2:
- * Date:
+ * Partner 1: Tim Yu
+ * Partner 2: Medhashree Adhikari
+ * Date: Friday, September 26, 2025
  */
 
 #include "project1.hpp"
