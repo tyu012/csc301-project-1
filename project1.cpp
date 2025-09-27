@@ -74,12 +74,18 @@ void insertionSort(vector<double> &arrayToSort) {
 void bubbleSort(vector<double> &arrayToSort) {
     // Move the larger elements to the end
     for (int i = arrayToSort.size(); i > 0; i--) {
+        bool swapped = false;
         // Bubble larger elements to the end of unsorted (beginning of sorted)
         for (int j = 0; j < i - 1; j++) {
             if (arrayToSort[j] > arrayToSort[j+1]) {
                 swap(arrayToSort, j, j + 1);
+                swapped = true;
             }
+            // If we didn't swap, then array is sorted.
         } // inner loop
+        if (!swapped) {
+            return;
+        }
     } // outer loop
 }
 
@@ -130,7 +136,7 @@ void mergeSort(vector<double> &arrayToSort) {
             l++;
         }
         if (r < right.size() && l >= left.size()) {
-            arrayToSort[i] = right[l];
+            arrayToSort[i] = right[r];
             i++;
             r++;
         }
