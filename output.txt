@@ -1,0 +1,112 @@
+./project1tests 
+Testing selectionSort
+
+Succeded test 1: singleton array
+Succeded test 2: repeated elements
+Succeded test 3: all repeated elements
+Succeded test 4: descending order
+Succeded test 5: sorted input
+Succeded test 6: negative inputs
+Succeded test 7: mixed positive/negative
+Succeded test 8: array of size 2^k - 1
+Succeded test 9: random real numbers
+Passed 9/9 tests.
+
+Testing insertionSort
+
+Succeded test 1: singleton array
+Succeded test 2: repeated elements
+Succeded test 3: all repeated elements
+Succeded test 4: descending order
+Succeded test 5: sorted input
+Succeded test 6: negative inputs
+Succeded test 7: mixed positive/negative
+Succeded test 8: array of size 2^k - 1
+Succeded test 9: random real numbers
+Passed 9/9 tests.
+
+Testing bubbleSort
+
+Succeded test 1: singleton array
+Succeded test 2: repeated elements
+Succeded test 3: all repeated elements
+Succeded test 4: descending order
+Succeded test 5: sorted input
+Succeded test 6: negative inputs
+Succeded test 7: mixed positive/negative
+Succeded test 8: array of size 2^k - 1
+Succeded test 9: random real numbers
+Passed 9/9 tests.
+
+Testing mergeSort
+
+Succeded test 1: singleton array
+Succeded test 2: repeated elements
+Succeded test 3: all repeated elements
+Succeded test 4: descending order
+Succeded test 5: sorted input
+Succeded test 6: negative inputs
+Succeded test 7: mixed positive/negative
+Succeded test 8: array of size 2^k - 1
+Succeded test 9: random real numbers
+Passed 9/9 tests.
+
+Testing quickSort
+
+Succeded test 1: singleton array
+Succeded test 2: repeated elements
+Succeded test 3: all repeated elements
+Succeded test 4: descending order
+Succeded test 5: sorted input
+Succeded test 6: negative inputs
+Succeded test 7: mixed positive/negative
+Succeded test 8: array of size 2^k - 1
+Succeded test 9: random real numbers
+Passed 9/9 tests.
+
+Timing selectionSort
+
+Timing algorithm using random data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.90405
+
+Timing algorithm using only sorted data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.99711
+
+Timing insertionSort
+
+Timing algorithm using random data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.98803
+
+Timing algorithm using only sorted data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.07628
+
+Timing bubbleSort
+
+Timing algorithm using random data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.79919
+
+Timing algorithm using only sorted data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.11636
+
+Timing mergeSort
+
+Timing algorithm using random data.
+Averaging over 30 Trials.
+
+Timing algorithm using only sorted data.
+Averaging over 30 Trials.
+
+Timing quickSort
+
+Timing algorithm using random data.
+Averaging over 30 Trials.
+
+Timing algorithm using only sorted data.
+Averaging over 30 Trials.
+Algorithm's log-log slope: 1.05024
