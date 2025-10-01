@@ -6,6 +6,10 @@
  * Partner 1: Tim Yu
  * Partner 2: Medhashree Adhikari
  * Date: Friday, September 26, 2025
+ * 
+ * Credit (10/1/25):
+ * Eric Autry '6_invariants_part2_soln.pdf' (for quicksort)
+ * Garikai Gijima (for quicksort)
  */
 
 #include "project1.hpp"
@@ -177,16 +181,20 @@ void quickSortHelper(vector<double> &arrayToSort, int i, int j) {
             }
 
             // Swap when both pointers stuck
-            if (a <= b) {
-                swap(arrayToSort, a, b);
+            if (a == b) {
+                break;
+            } else if (arrayToSort[a] == p && arrayToSort[b] == p) {
+                // Edge case
                 a++;
-                b--;
+            } else {
+                swap(arrayToSort, a, b);
             }
         }
 
         // Recursively perform quicksort on the partitioned sub-arrays
-        quickSortHelper(arrayToSort, i, b + 1);
-        quickSortHelper(arrayToSort, a, j);
+        // Note that a is the pivot.
+        quickSortHelper(arrayToSort, i, a);
+        quickSortHelper(arrayToSort, a + 1, j);
     }
 }
 
